@@ -9,33 +9,38 @@ import BusinessInfoForm from "./components/auth/BusinessInfoForm.jsx";
 import AccountingInfoForm from "./components/auth/AccountingInfoForm.jsx";
 import CreateBusinessForm from "./components/auth/CreateBusinessForm.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Navigate to="/login" replace />,
+    },
+    {
+      path: "/login",
+      element: <AuthPage mode="login" />,
+    },
+    {
+      path: "/register",
+      element: <AuthPage mode="register" />,
+      children: [
+        { index: true, element: <RegisterForm /> },
+        { path: "registerotp", element: <OtpForm /> },
+        { path: "registerpassword", element: <PasswordForm /> },
+        { path: "registeruser", element: <UserInfoForm /> },
+      ],
+    },
+    {
+      path: "/register/business",
+      element: <BusinessLayout />,
+      children: [
+        { index: true, element: <BusinessInfoForm /> },
+        { path: "accounting", element: <AccountingInfoForm /> },
+        { path: "create", element: <CreateBusinessForm /> },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Navigate to="/login" replace />,
+    basename: "/React-Auth-Page/",
   },
-  {
-    path: "/login",
-    element: <AuthPage mode="login" />,
-  },
-  {
-    path: "/register",
-    element: <AuthPage mode="register" />,
-    children: [
-      { index: true, element: <RegisterForm /> },
-      { path: "registerotp", element: <OtpForm /> },
-      { path: "registerpassword", element: <PasswordForm /> },
-      { path: "registeruser", element: <UserInfoForm /> },
-    ],
-  },
-  {
-    path: "/register/business",
-    element: <BusinessLayout />,
-    children: [
-      { index: true, element: <BusinessInfoForm /> },
-      { path: "accounting", element: <AccountingInfoForm /> },
-      { path: "create", element: <CreateBusinessForm /> },
-    ],
-  },
-]);
+);
 export default router;
