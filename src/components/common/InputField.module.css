@@ -1,0 +1,59 @@
+.wrapper {
+  position: relative;
+  margin-bottom: 25px;
+  font-family: "Vazir-Bold", sans-serif;
+}
+
+.input {
+  width: 100%;
+  padding: 6px 10px 8px 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: "Vazir-Bold", sans-serif;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.inputFocused {
+  border-color: #007bff;
+}
+
+.inputError {
+  border-color: #dc3545;
+}
+
+.label {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 16px;
+  color: #666;
+  background: white;
+  padding: 0 6px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  font-family: "Vazir-Bold", sans-serif;
+}
+
+.labelFloating {
+  top: -10px;
+  font-size: 13px;
+  color: #007bff;
+}
+
+.labelError {
+  color: #dc3545;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+  font-family: "Vazir-Bold", sans-serif;
+}

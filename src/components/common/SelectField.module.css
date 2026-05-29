@@ -1,0 +1,61 @@
+.wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "Vazir-Bold", sans-serif;
+}
+
+.select {
+  width: 100%;
+  padding: 5px 16px 5px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: "Vazir-Bold", sans-serif;
+  background: white;
+  text-align: right;
+  appearance: auto;
+}
+
+.selectFocused {
+  border-color: #007bff;
+}
+
+.selectError {
+  border-color: #dc3545;
+}
+
+.label {
+  position: absolute;
+  right: 16px;
+  background: white;
+  padding: 0 6px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  font-family: "Vazir-Bold", sans-serif;
+}
+
+.labelFloating {
+  top: -10px;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.labelFocused {
+  color: #007bff;
+}
+
+.labelError {
+  color: #dc3545;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.select {
+  padding-left: 40px;
+}
